@@ -11,11 +11,11 @@ class PostsController < ApplicationController
     @post.update(post_params)
     if @post.valid?
       @post.save
-    redirect_to post_path(@post)
-  else
-    render :edit
+      redirect_to post_path(@post)
+    else
+     render :edit
+    end
   end
-end
 
   private
 
